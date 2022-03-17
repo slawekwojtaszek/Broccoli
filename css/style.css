@@ -6,12 +6,16 @@
    box-sizing: border-box;
 }
 
+/* Body */
+
 body,
 html {
    scroll-behavior: smooth;
    font-family: Helvetica, sans-serif;
    overflow-x: hidden;
 }
+
+/* Variables */
 
 :root {
    --main: #1de472;
@@ -23,7 +27,6 @@ html {
    width: 100%;
    padding: 1rem;
    background-color: var(--main);
-   z-index: 2;
 }
 
 #nav-main .container {
@@ -32,6 +35,7 @@ html {
    align-items: center;
    justify-content: space-between;
    flex-direction: row;
+   background-color: var(--main);
 }
 
 /* Logo */
@@ -58,7 +62,8 @@ html {
    z-index: 2;
 }
 
-/* MENU MOBILE */
+/* Menu Mobile */
+
 .menu {
    display: none;
    width: 100vw;
@@ -85,6 +90,7 @@ ul a {
    font-size: 1.4rem;
    text-decoration: none;
    transition: 0.4s;
+   border-radius: 4px;
 }
 
 ul a:hover {
@@ -154,7 +160,7 @@ ul a:hover {
    justify-content: center;
    align-items: center;
 
-   width: 150%;
+   width: 105%;
    height: 200%;
 }
 
@@ -165,6 +171,17 @@ ul a:hover {
 }
 
 /* Descripction Section */
+#descripction h1,
+#main-section h1,
+#facts .container1 h1,
+#growing h1 {
+   padding: 0.5rem;
+   font-size: 2.5rem;
+   text-align: center;
+}
+#growing h1 {
+   margin: 2rem;
+}
 
 #descripction {
    display: flex;
@@ -182,18 +199,12 @@ ul a:hover {
    justify-content: center;
    align-items: center;
 }
-#descripction h1,
-#main-section h1,
-#growing h1 {
-   margin: 0 1rem;
-   padding: 0.5rem;
-   font-size: 2.5rem;
-   text-align: center;
-}
+
 #descripction p {
    margin: 0 1.5rem;
    font-size: 1.4rem;
    padding: 1rem;
+   text-align: center;
 }
 
 #descripction ul {
@@ -201,25 +212,84 @@ ul a:hover {
    height: 70%;
    display: flex;
    flex-direction: column;
-   align-items: flex-start;
+   justify-content: center;
+   align-items: center;
 }
 
 #descripction ul li {
-   margin: 0 1rem;
-   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   flex-direction: row;
+   padding: 0.2rem 0.7rem;
+   margin: 0.2rem;
+   width: 70%;
    font-size: 1rem;
-   padding: 0.4rem 1rem;
-   border-bottom: 3px solid transparent;
+   border-bottom: 2px solid transparent;
    transition: 0.4s;
+}
+
+#descripction ul li p {
+   margin: 0;
+   font-size: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   line-height: 2rem;
+}
+
+.cont {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 #descripction ul li:hover {
    transform: scale(1.2);
-   border-bottom: 3px solid var(--main);
+   border-bottom: 2px solid var(--main);
 }
 
 .mark {
    color: var(--main);
+}
+
+.macro,
+.vitamins {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+}
+
+.item .name,
+.detail,
+.percentage {
+   width: 30%;
+   font-size: 1.3rem;
+}
+
+.item {
+   margin: 0.5rem 0.5rem;
+   padding: 0.5rem 1rem;
+   width: 85%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: white;
+   background-color: var(--main);
+   border: 2px solid var(--main);
+   border-radius: 5px;
+   transition: 0.4s;
+   box-shadow: 0px 5px 10px rgb(211, 211, 211);
+}
+
+.item:hover {
+   transform: scale(1.1);
+}
+h4 {
+   margin-top: 2rem;
 }
 
 /* Facts Section */
@@ -235,27 +305,29 @@ ul a:hover {
 #facts .container1,
 #facts .container2 {
    height: 100%;
-   margin: 1rem;
-   background-color: #fff;
-}
-
-#facts .container1 h1,
-#facts .container2 h1 {
-   text-align: center;
-   color: #333;
-   font-size: 3rem;
-   background-color: #fff;
+   margin: 1.4rem;
 }
 
 .listfacts {
 }
 
+.listfacts ol {
+   margin: 0 auto;
+   width: 90%;
+   padding: 1rem;
+   margin-top: 2rem;
+}
+
 .listfacts li {
-   margin: 1rem;
+   width: 100%;
+   margin: 2rem auto;
    padding: 0.5rem;
-   font-size: 1rem;
+   font-size: 1.1rem;
    line-height: 1.7rem;
    transition: 0.4s;
+   border: 1px solid var(--main);
+   border-radius: 5px;
+   box-shadow: 0px 5px 10px rgb(211, 211, 211);
 }
 
 .listfacts li:hover {
@@ -272,19 +344,20 @@ ul a:hover {
 
 .footer-image {
    position: relative;
-   height: 30vh;
+   height: 50vh;
    width: 100vw;
    background: url(/images/broccoli3.jpg) no-repeat center center/cover;
 }
 
 .footer-image h1 {
    position: absolute;
+   text-transform: uppercase;
    top: 70%;
    left: 30%;
    text-align: center;
    font-weight: 900;
    color: white;
-   font-size: 2rem;
+   font-size: 3rem;
    /* text-shadow: 2px 2px 4px rgb(255, 255, 255); */
 }
 
@@ -301,8 +374,7 @@ ul a:hover {
 .box h1 {
    text-align: center;
    line-height: 2rem;
-   padding: 2rem;
-   font-size: 1.5rem;
+   font-size: 1.2rem;
    font-weight: 900;
    color: white;
 }
@@ -318,9 +390,9 @@ ul a:hover {
 /* Countries */
 
 .countries {
-   margin: 0 auto;
-   width: 100%;
-   height: 70vh;
+   margin: 3rem auto;
+   width: 90%;
+   height: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -335,13 +407,14 @@ ul a:hover {
 .c5,
 .total {
    margin: 0.5rem;
-   width: 90%;
+   width: 85%;
    display: flex;
    justify-content: space-around;
    align-items: center;
-   border: 1px solid var(--main);
+
    border-radius: 6px;
    transition: 0.4s;
+   box-shadow: 0px 5px 10px rgb(211, 211, 211);
 }
 
 .c1:hover,
@@ -350,8 +423,7 @@ ul a:hover {
 .c4:hover,
 .c5:hover,
 .total:hover {
-   color: white;
-   background-color: var(--main);
+   transform: scale(1.1);
 }
 
 .total:hover {
@@ -372,6 +444,10 @@ ul a:hover {
    text-align: center;
 }
 
+.top {
+   width: 90%;
+}
+
 .number {
    margin: 0 auto;
    height: 70%;
@@ -389,6 +465,7 @@ ul a:hover {
 .world,
 .top {
    justify-content: space-around;
+   align-items: center;
    padding: 0.4rem;
    text-align: center;
 }
@@ -398,6 +475,18 @@ ul a:hover {
    background-color: black;
    color: white;
    border: black;
+}
+
+.total {
+   color: white;
+   background-color: black;
+   transform: scale(1.1);
+}
+
+.total .number {
+   background-color: black;
+   color: white;
+   font-weight: 900;
 }
 
 .country,
@@ -423,15 +512,12 @@ img.flag {
    width: 50px;
    height: 50px;
    cursor: pointer;
-
-   transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger {
    width: 35px;
    height: 5px;
    background: rgb(255, 255, 255);
    border-radius: 5px;
-   transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger::before,
 .menu-btn__burger::after {
@@ -441,8 +527,7 @@ img.flag {
    height: 5px;
    background: rgb(255, 255, 255);
    border-radius: 5px;
-
-   transition: all 0.5s ease-in-out;
+   transition: all 0.3s ease-in-out;
 }
 .menu-btn__burger::before {
    transform: translateY(-16px);
@@ -522,4 +607,142 @@ img.flag {
    left: 85%;
    width: 60px;
    height: 60px;
+}
+
+.button {
+   display: flex;
+   border: none;
+   padding: 1rem 2rem;
+   margin: 1rem;
+   text-decoration: none;
+   background: #0069ed;
+   color: #ffffff;
+   font-family: sans-serif;
+   font-size: 1rem;
+   cursor: pointer;
+   text-align: center;
+   border-radius: 5px;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 900px) and (max-width: 2000px) {
+   #nav-main .container {
+      max-width: 70%;
+   }
+
+   .menu-btn {
+      display: none;
+   }
+
+   .logo {
+      margin-left: -7rem;
+   }
+
+   .menu {
+      display: block;
+      position: absolute;
+      top: 5%;
+      left: 50%;
+   }
+
+   ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      height: 20%;
+      width: 40%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      list-style: none;
+   }
+
+   ul a {
+      padding: 0.3rem 0.5rem;
+      margin: 1rem;
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.4s;
+      border-radius: 4px;
+      text-align: center;
+   }
+
+   ul a:hover {
+      background-color: white;
+      color: #009966;
+      transform: scale(1.1);
+   }
+   #showcase h1 {
+      font-size: 7rem;
+   }
+   #main-section {
+      margin: 0 auto;
+      max-width: 70%;
+   }
+
+   #main-section p {
+      font-size: 1.5rem;
+   }
+
+   .countries {
+      max-width: 900px;
+   }
+
+   #descripction ul {
+      margin-top: 2rem;
+      width: 100%;
+   }
+   #descripction ul li {
+      font-size: 1.4rem;
+   }
+
+   #descripction .info p {
+      margin-top: 4rem;
+   }
+   #descripction p {
+      font-size: 2rem;
+   }
+
+   #descripction .info {
+      width: 70%;
+   }
+
+   #descripction h1,
+   #main-section h1,
+   #growing h1,
+   #facts .container1 h1 {
+      padding: 0.5rem;
+      font-size: 3.5rem;
+      text-align: center;
+   }
+
+   .listfacts ol {
+      margin: 4rem auto 2rem auto;
+      padding: 2rem;
+      width: 80%;
+      border: none;
+      border-radius: 5px;
+      box-shadow: none;
+   }
+
+   .listfacts li {
+      margin: 1.5rem 4rem;
+      padding: 2rem;
+      font-size: 1.3rem;
+   }
+
+   .line {
+      margin-bottom: 3rem;
+   }
+
+   .image2 {
+      width: 100%;
+   }
+
+   .footer-image {
+      height: 90vh;
+   }
 }
