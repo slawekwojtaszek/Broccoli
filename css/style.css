@@ -9,13 +9,12 @@
 body,
 html {
    scroll-behavior: smooth;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: Helvetica, sans-serif;
    overflow-x: hidden;
 }
 
 :root {
    --main: #1de472;
-   --white: #ffffff;
 }
 
 /* Navigation Section */
@@ -85,13 +84,13 @@ ul a {
    color: white;
    font-size: 1.4rem;
    text-decoration: none;
-   transform: scale(1);
+   transition: 0.4s;
 }
 
 ul a:hover {
    background-color: white;
    color: #009966;
-   transform: scale(1);
+   transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -184,12 +183,15 @@ ul a:hover {
    align-items: center;
 }
 #descripction h1,
-#main-section h1 {
-   text-align: center;
+#main-section h1,
+#growing h1 {
+   margin: 0 1rem;
    padding: 0.5rem;
-   font-size: 3rem;
+   font-size: 2.5rem;
+   text-align: center;
 }
 #descripction p {
+   margin: 0 1.5rem;
    font-size: 1.4rem;
    padding: 1rem;
 }
@@ -203,6 +205,7 @@ ul a:hover {
 }
 
 #descripction ul li {
+   margin: 0 1rem;
    width: 100%;
    font-size: 1rem;
    padding: 0.4rem 1rem;
@@ -211,6 +214,7 @@ ul a:hover {
 }
 
 #descripction ul li:hover {
+   transform: scale(1.2);
    border-bottom: 3px solid var(--main);
 }
 
@@ -248,8 +252,17 @@ ul a:hover {
 
 .listfacts li {
    margin: 1rem;
+   padding: 0.5rem;
    font-size: 1rem;
    line-height: 1.7rem;
+   transition: 0.4s;
+}
+
+.listfacts li:hover {
+   transform: scale(1.1);
+   background-color: var(--main);
+   border-radius: 7px;
+   color: white;
 }
 .listfacts li::marker {
    color: var(--main);
@@ -266,12 +279,137 @@ ul a:hover {
 
 .footer-image h1 {
    position: absolute;
-   top: 50%;
-   left: 60%;
+   top: 70%;
+   left: 30%;
    text-align: center;
+   font-weight: 900;
    color: white;
    font-size: 2rem;
-   text-shadow: 2px 2px 4px rgb(255, 255, 255);
+   /* text-shadow: 2px 2px 4px rgb(255, 255, 255); */
+}
+
+.box {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   height: 30vh;
+   background-color: var(--main);
+}
+
+.box h1 {
+   text-align: center;
+   line-height: 2rem;
+   padding: 2rem;
+   font-size: 1.5rem;
+   font-weight: 900;
+   color: white;
+}
+
+.box span.number {
+   text-align: center;
+   width: 100%;
+   font-size: 1.7rem;
+   color: white;
+   transition: 0.4s;
+}
+
+/* Countries */
+
+.countries {
+   margin: 0 auto;
+   width: 100%;
+   height: 70vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.top,
+.c1,
+.c2,
+.c3,
+.c4,
+.c5,
+.total {
+   margin: 0.5rem;
+   width: 90%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   border: 1px solid var(--main);
+   border-radius: 6px;
+   transition: 0.4s;
+}
+
+.c1:hover,
+.c2:hover,
+.c3:hover,
+.c4:hover,
+.c5:hover,
+.total:hover {
+   color: white;
+   background-color: var(--main);
+}
+
+.total:hover {
+   color: white;
+   background-color: black;
+   border: black;
+}
+
+.name,
+.number,
+.world,
+.top {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 70%;
+   font-size: 1.2rem;
+   text-align: center;
+}
+
+.number {
+   margin: 0 auto;
+   height: 70%;
+   width: 20%;
+   font-weight: 900;
+   background-color: var(--main);
+   border-radius: 5px;
+   color: white;
+}
+
+.name {
+   justify-content: flex-start;
+}
+
+.world,
+.top {
+   justify-content: space-around;
+   padding: 0.4rem;
+   text-align: center;
+}
+.top {
+   padding: 0.4rem;
+   margin: 0 1rem 1rem 1rem;
+   background-color: black;
+   color: white;
+   border: black;
+}
+
+.country,
+.tones {
+   margin: 0.5rem;
+}
+
+img.flag {
+   margin: 1rem;
+   display: block;
+   height: 40px;
+   width: 40px;
 }
 
 /* Menu Icon */
@@ -372,8 +510,16 @@ ul a:hover {
    color: transparent;
 }
 .line {
-   margin: 1rem auto;
+   margin: 0.5rem auto;
    height: 3px;
    width: 14rem;
    background-color: var(--main);
+}
+
+.up {
+   position: fixed;
+   top: 92%;
+   left: 85%;
+   width: 60px;
+   height: 60px;
 }
